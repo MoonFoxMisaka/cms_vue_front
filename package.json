@@ -14,7 +14,7 @@
     "core-js": "^3.8.3",
     "cors": "^2.8.5",
     "echarts": "^5.5.1",
-    "element-plus": "^2.4.2",
+    "element-plus": "^2.10.2",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "postcss": "^8.4.31",
