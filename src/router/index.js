@@ -4,6 +4,7 @@ import EmployeeListView from "../views/employee/EmployeeListView.vue";
 import SettingView from "../views/SettingView.vue";
 import LoginView from "../views/LoginView.vue";
 import EmployeeRegisterView from '@/views/employee/EmployeeRegisterView.vue';
+import EmployeeInviteView from '@/views/employee/EmployeeInviteView.vue';
 import ContractListView from "@/views/contract/ContractListView.vue";
 import ContractRegisterView from "@/views/contract/ContractRegisterView.vue";
 import CustomerView from "../views/customer/CustomerView.vue";
@@ -11,12 +12,19 @@ import CustomerRegisterView from "@/views/customer/CustomerRegisterView.vue";
 import ResponsibleRegisterView from "@/views/customer/ResponsibleRegisterView.vue";
 
 import axios from 'axios'
+import loginRegister from '@/views/inviteRegister/loginRegister.vue';
+import trueRegister from '@/views/inviteRegister/trueRegister.vue';
+import authenticatorRequest from '@/views/inviteRegister/authenticatorRequest.vue';
 
 const routes = [
   { path: "/", redirect: "/login" },
   { path: "/login", name: "Login", component: LoginView },
+  { path: "/regist/loginRegister", name: "loginRegister", component: loginRegister },
+  { path: "/regist/trueRegister/:id", name: "trueRegister", component: trueRegister },
+  { path: "/regist/authenticatorRequest/:otpurl", name: "authenticatorRequest", component: authenticatorRequest },
   { path: "/home", name: "Home", component: HomeView, meta: { requiresAuth: true } },
   { path: "/employee", name: "User", component: EmployeeListView, meta: { requiresAuth: true } },
+  { path: "/invite", name: "Invite", component: EmployeeInviteView, meta: { requiresAuth: true } },
   { path: "/employee/register", component: EmployeeRegisterView, meta: { requiresAuth: true } },
   { path: "/setting", name: "Setting", component: SettingView, meta: { requiresAuth: true } },
   { path: "/employee/detail/:id", component: () => import("@/views/employee/EmployeeDetailView.vue") },
