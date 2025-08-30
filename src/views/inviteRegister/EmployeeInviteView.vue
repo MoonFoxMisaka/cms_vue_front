@@ -99,10 +99,17 @@
               label="権限"
               prop="role"
             >
-              <el-input
+              <el-select
                 v-model="form.role"
                 clearable
-              />
+              >
+                <el-option
+                  v-for="item in roleOptions"
+                  :key="item.value"
+                  :label="item.label"
+                  :value="item.value"
+                />
+              </el-select>   
             </el-form-item>
           </el-col>
           <el-col :span="12">
@@ -163,6 +170,11 @@ const form = reactive({
   role: '',
   department_id: ''
 });
+
+const roleOptions = [
+  { value: 'admin', label: '管理者' },
+  { value: 'employee', label: '社員' }
+];
 
 const departmentOptions = [
   { value: '1', label: '人事部' },

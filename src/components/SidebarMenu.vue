@@ -22,7 +22,7 @@
             <el-menu-item index="/employee">社員一覧</el-menu-item>
             <el-menu-item index="/setting">休暇一覧</el-menu-item>
             <el-menu-item index="/employee">履歴</el-menu-item>
-            <el-menu-item index="/invite">招待登録</el-menu-item>
+            <el-menu-item v-if="permissions.showPayroll" index="/invite">招待登録</el-menu-item>
           </el-menu-item-group>
         </el-sub-menu>
 

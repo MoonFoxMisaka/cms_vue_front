@@ -4,7 +4,7 @@ import EmployeeListView from "../views/employee/EmployeeListView.vue";
 import SettingView from "../views/SettingView.vue";
 import LoginView from "../views/LoginView.vue";
 import EmployeeRegisterView from '@/views/employee/EmployeeRegisterView.vue';
-import EmployeeInviteView from '@/views/employee/EmployeeInviteView.vue';
+import EmployeeInviteView from '@/views/inviteRegister/EmployeeInviteView.vue';
 import ContractListView from "@/views/contract/ContractListView.vue";
 import ContractRegisterView from "@/views/contract/ContractRegisterView.vue";
 import CustomerView from "../views/customer/CustomerView.vue";

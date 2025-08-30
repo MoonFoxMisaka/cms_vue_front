@@ -57,7 +57,7 @@ onMounted(async () => {
 })
 const handleRegist = async () => {
   axios.defaults.withCredentials = true
-router.push('/home')
+router.push('/login')
 }
 </script>
 

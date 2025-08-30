@@ -5,7 +5,7 @@
   >
     <!-- 登录页面不显示菜单 -->
     <div
-      v-if="route.path !== '/login' && route.path !== '/regist/loginRegister' && route.path !== '/regist/trueRegister/:id'"
+      v-if="route.path !== '/login' && route.path !== '/regist/loginRegister' && route.name !== 'trueRegister' && route.name !== 'authenticatorRequest'"
       class="sidebar"
     >
       <SidebarMenu />
